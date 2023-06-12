@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Webpage With Style</title>
+
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+
+    <nav class="nav-container">
+        <div class="topnav">
+
+            <img src="yaslinimg.jpg" alt="Avatar">
+            <a href="#projects">Projects</a>
+            <a href="#about">About Me</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact-me">Contact Me</a>
+
+        </div>
+    </nav>
+
+
+    <section class="hero">
+
+        <h1>Hi, I'm Yaslin Carmona</h1>
+        <h2>Full Stack Software Engineer</h2>
+        <a href="#projects" class="button">View my Project</a>
+
+
+    </section>
+
+    <div class="about-skill">
+
+        <div id="about">
+
+            <h2>About Me</h2>
+            <span class="underline"></span>
+
+            <p>I'm a programmer with a passion for innovation and problem-solving. With a background in sales and
+                finance, I bring a unique perspective to every project, offering a well-rounded approach to software
+                development.
+            </p>
+
+            <p>I thrive on challenges, constantly pushing myself to learn new technologies to help me achieve my goals.
+                If you'd like to know more about my work, please check out my website.
+            </p>
+
+            <p>You'll find some of my projects
+                there, along with my publications. I am always open to connecting with other professionals in the
+                industry and
+                welcome the opportunity to discuss potential collaborations or projects. I appreciate your interest, and
+                I'm always happy to connect with other professionals in the industry.
+            </p>
+            <a href="#contact-me" class="contactbutton"> Contact Me</a>
+        </div>
+
+        <div id="skills">
+
+            <h2> Skills</h2>
+
+            <span class="underline"></span>
+
+            <div>
+                <span class="skillbutton"> HTML</span>
+
+                <span class="skillbutton"> CSS</span>
+
+                <span class="skillbutton"> JavaScript</span>
+
+            </div>
+        </div>
+
+    </div>
+
+    <section>
+
+        <div class="projects" id="projects">
+
+            <h2>Projects</h2>
+
+            <span class="underline"></span>
+
+            <div class="card-container">
+
+                <div class="card">
+                    <a class="card-link" href="/projectcolorflipper/">
+                        <img class="card-img"
+                        src="/projectcolorflipper/color-flipper.png" alt="Avatar" width="300" height="200">
+                        <div class="container">
+                            <h4><b>Color Flipper</b></h4>
+                            <p><b>HTML, CSS, JavaScript</b></p>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="card">
+                    <img src="comingsoon.avif" alt="Avatar" style="width:100%">
+                    <div class="container">
+                        <h4><b>Upcoming Project</b></h4>
+                        <p><b>TBD</b></p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="comingsoon.avif" alt="Avatar" style="width:100%">
+                    <div class="container">
+                        <h4><b>Upcoming Project</b></h4>
+                        <p><b>TBD</b></p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="comingsoon.avif" alt="Avatar" style="width:100%">
+                    <div class="container">
+                        <h4><b>Upcoming Project</b></h4>
+                        <p><b>TBD</b></p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section>
+        <div class="blog" id="contact-me">
+
+            <h2>Contact Me</h2>
+
+            <span class="underline"></span>
+
+            <div class="container bg-white">
+                <form>
+                    <label for="fname">Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Enter Your Name">
+
+                    <!-- <label for="lname">Email</label>
+                    <input type="text" id="email" name="email" placeholder="Enter Your Email"> -->
+
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Enter Your Message"
+                        style="height:200px"></textarea>
+
+                    <!-- <input type="submit" value="Submit"> -->
+                    <a id="contact-me-link" href="mailto:yaslin123@gmail.com?subject='Portfolio Inquiry'&body=">Message
+                        Me</a>
+                </form>
+            </div>
+
+    </section>
+
+    <footer>
+
+        <div class="footer">
+
+            <div>
+
+                <h2>Yaslin Carmona </h2>
+
+                <p>A Full Stack developer focused on building responsive and powerful websites that contribute to the
+                    overall success
+                    of
+                    the product and company.</p>
+
+            </div>
+
+            <div id=social>
+
+                <h2>Social</h2>
+
+                <div class="social-icon-container">
+
+                    <a href="https://github.com/yaslin1" target="_blank">
+                        <i class="fa fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/yaslincarmona" target="_blank">
+                        <i class="fa fa-linkedin-square"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <script>
+        const btn = document.querySelector("#contact-me-link");
+        btn.onclick = (e) => {
+            const name = encodeURI(document.querySelector("#fname").value);
+            const message = encodeURI(document.querySelector("#message").value);
+            btn.setAttribute("href", `mailto:yaslin123@gmail.com?subject='Portfolio Inquiry from ${name}'&body=${message}`)
+        };
+    </script>
+</body>
+
+</html>
